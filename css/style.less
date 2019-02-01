@@ -90,6 +90,81 @@ header{
 	.c(#fff);
 }
 
+.pro-head{
+	.bg(#ededed);
+}
+.head-con{
+	.p2(0,0.4);
+	.tc;
+	.fs(0.16);
+	.c(#fff);
+	.lh(0.4);
+}
+.head-menu{
+	.fs(0);
+	a{
+		.fs(0.12);
+		.lh(0.4);
+		.c(#333);
+		.ovh;
+		.di;
+		.p2(0,0.15);
+		.por;
+		&.active:before{
+			content: '';
+			.wh(0.3,2px);
+			.ovh;
+			.poa;
+			.posl(50%);
+			.posb;
+			.ml(-0.15);
+			.bg(#ce1a1b);
+		}
+	}
+}
+.head-more{
+	.w(0.4);
+	.fs(0.3);
+	.lh(0.4);
+	.c(#9c9c9c);
+	.poa;
+	.post;
+	.posr;
+	.tc;
+}
+.exit{
+	.w(0.5);
+	.fs(.1);
+	.c(#fff);
+}
+.return{
+	.wh(0.4,0.4);
+	.poa;
+	.post;
+	.posl;
+	&:after{
+		.wh(0.11,0.11);
+		.ovh;
+		.poa;
+		.posl(0.17);
+		.post(0.14);
+		content: '';
+		border-left: 2px solid #ce1a1b;
+		border-bottom: 2px solid #ce1a1b;
+		transform:rotateZ(45deg)
+	}
+}
+.per-head{
+	.return{
+		&:after{
+			border-color: #fff;
+		}
+	}
+	.head-more{
+		.c(#fff);
+	}
+}
+
 
 /**- banner -**/
 .banner{
@@ -122,7 +197,7 @@ footer{
 	.h(0.55);
 	.pof;
 	.posl;
-	.posb;
+	.posb(2);
 	.bg(#fff);
 	.zi(999);
 	border-top: 1px solid #f1f1f1;
@@ -224,6 +299,20 @@ footer{
 		}
 	}
 }
+.man-footer{
+	.h(0.48);
+	.pop-btn{
+		.h(0.48);
+	}
+	a{
+		.p(0);
+		.bg(#ce1a1b);
+		.lh(0.48);
+		&:before{
+			.dn;
+		}
+	}
+}
 
 
 /**- popoup -**/
@@ -245,6 +334,7 @@ footer{
 }
 .pop-main{
 	.p2(0.1,0.15);
+	.pb(0);
 }
 .pop-stitle{
 	.fs(0.16);
@@ -253,10 +343,12 @@ footer{
 	.fwn;
 	.pb(0.1);
 }
-.pop-service{
+.pop-center{
 	.h(3);
-	.mb(0.1);
+	.pb(0.6);
 	overflow: auto;
+}
+.pop-service{
 	li{
 		.pb(0.15);
 	}
@@ -264,7 +356,6 @@ footer{
 		.fs(0.14);
 		.lh(0.2);
 		.c(#333);
-		// .pb(0.01);
 		.fwn;
 		i{
 			.wh(0.18,0.18);
@@ -291,12 +382,165 @@ footer{
 	.lh(0.2);
 	.c(#fff);
 	.tc;
+	.zi(10);
+}
+.pop-btn{
+	.wh(100%,0.5);
+	.bg(#f60);
+	.poa;
+	.posl;
+	.posb;
+	a{
+		.fs(0.16);
+		.c(#fff);
+		.lh(0.5);
+		.tc;
+		.ovh;
+	}
+}
+.pop-config{
+	.pop-main{
+		.h(3.8);
+		.pb(0.6);
+		overflow: auto;
+	}
+	.pop-btn{
+		a{
+			.w(50%);
+			.fl;
+		}
+		.pop-buy{
+			.bg(#f22d00);
+		}
+	}
+}
+.pop-profile{
+	.poa;
+	.post(0.1);
+	.posl(0.15);
+	.zi(1);
+	.bg(#fff);
 }
 .pop-prod{
 	border-bottom: 1px solid #ddd;
 }
 .pop-pimg{
 	.wh(0.6,0.6);
+	.fl;
+	.m2(0.1,0);
+}
+.pop-pinfo{
+	.w(2.75);
+	.fr;
+	.pt(0.3);
+	h6{
+		.fs(0.16);
+		.c(#f60);
+		.lh(0.22);
+		.fwn;
+	}
+	p{
+		.fs(0.12);
+		.c(#999);
+		.lh(0.18);
+		span{
+			.c(#333);
+		}
+	}
+}
+.pop-clist{
+	.pt(0.85);
+	.pb(0.2);
+	li{
+		.ovh;
+		.pt(0.15);
+	}
+	p{
+		.w(0.7);
+		.fl;
+		.fs(0.12);
+		.c(#333);
+		.lh(28px);
+	}
+	div{
+		.w(2.75);
+		.fl;
+		.fs(0);
+		.lh(0);
+		a:first-child{
+			.ml(0);
+		}
+	}
+	a{
+		.ovh;
+		.di;
+		.p2(0,0.13);
+		.ml(0.1);
+		.fs(0.12);
+		.lh(26px);
+		.bor(#d1d1d1,1px);
+		.por;
+		&.pop-cac{
+			.lh(24px);
+			.bor(#f60,2px);
+			&:after{
+				.poa;
+				.posr;
+				.posb;
+				.wh(0.16,0.16);
+				content: '';
+				.bgi('../images/pop-sel.png');
+				.bgsc;
+				.zi(1);
+			}
+		}
+	}
+}
+.pop-num{
+	.pt(0.2);
+	.pb(0.1);
+	p{
+		.w(1.7);
+		.fl;
+		.fs(0.12);
+		.c(#333);
+		.lh(30px);
+		span{
+			.c(#f60);
+			.pl(0.1);
+		}
+	}
+	div{
+		.w(1.5);
+		.fr;
+		.tr;
+		.fs(0);
+		.lh(0);
+	}
+	a,input{
+		.ovh;
+		.di;
+		vertical-align: top;
+		.lh(30px);
+		.tc;
+	}
+	a{
+		.w(34px);
+		.fs(.24);
+		.c(#999);
+		.fwb;
+		.bor(#e4e4e4,1px);
+	}
+	input{
+		.w(0.5);
+		.fs(0.14);
+		.c(#666);
+		border-top: 1px solid #e4e4e4;
+		border-bottom: 1px solid #e4e4e4;
+	}
+}
+.pop-success{
+	
 }
 
 
@@ -519,7 +763,7 @@ nav{
 }
 .group{
 	.w(100%);
-	overflow: auto;
+	overflow-x: auto;
 	.pt(0.15);
 	ul{
 		.w(5);
@@ -776,43 +1020,6 @@ nav{
 
 
 /***********************- product-view.html -*********************/
-.pro-head{
-	.bg(#ededed);
-}
-.head-menu{
-	.w(2);
-	.ovh;
-	.fl;
-	.tc;
-	.fs(0);
-	a{
-		.fs(0.12);
-		.lh(0.4);
-		.c(#333);
-		.ovh;
-		.di;
-		.p2(0,0.3);
-		.por;
-		&.active:before{
-			content: '';
-			.wh(0.3,2px);
-			.ovh;
-			.poa;
-			.posl(50%);
-			.posb;
-			.ml(-0.15);
-			.bg(#ce1a1b);
-		}
-	}
-}
-.head-more{
-	.w(0.4);
-	.fs(0.3);
-	.lh(0.4);
-	.c(#9c9c9c);
-	.fr;
-	.tc;
-}
 .pro-banner{
 	.dots{
 		li{
@@ -1009,7 +1216,12 @@ nav{
 }
 .pro-hot{
 	.p4(0,0.05,0,0.05);
+	.sec-title{
+		.pl(0.1);
+		.pr(0.1);
+	}
 	.product{
+		.mt(-0.05);
 		li{
 			.w(33.33%);
 			.pb(0.1);
@@ -1017,6 +1229,9 @@ nav{
 		}
 		.pro-con{
 			.p2(0,0.08);
+		}
+		img{
+			.p2(0.1,0);
 		}
 	}
 }
@@ -1029,29 +1244,367 @@ nav{
 		.c(#333);
 	}
 }
+.praise{
+	.sec-title{
+		h4{
+			.w(100%);
+			span{
+				.fr;
+				.c(#ce1a1b);
+				.fwb;
+			}
+		}
+	}
+}
+.pra-list{
+	li{
+		.pb(0.15);
+		border-top: 1px solid #e3e3e3;
+	}
+}
+.pra-tit{
+	.pt(0.08);
+	.pb(0.03);
+	p,i{
+		.fs(.12);
+		.c(#999);
+		.lh(.22);
+		.ovh;
+		.fl;
+	}
+	i{
+		.fr;
+		.fsn;
+	}
+}
+.pra-con{
+	.fs(0.12);
+	.c(#666);
+	.lh(.22);
+}
+.pra-img{
+	.w(100%);
+	.pt(0.05);
+	overflow-x: auto;
+	span{
+		.ovh;
+		.fl;
+	}
+	img{
+		.wh(0.7,0.65);
+		.pr(0.05);
+	}
+}
+.pra-pic{
+	.w(4.2);
+}
+.pra-more{
+	.w(1);
+	.fs(0.12);
+	.c(#333);
+	.lh(.3);
+	.brh(0.3);
+	.tc;
+	.bor(#ccc,1px);
+	.mc;
+}
+.pro-profile{
+	.p(0);
+}
+.pro-pmenu{
+	border-bottom: 1px solid #ddd;
+	li{
+		.w(33.3333%);
+		.ovh;
+		.fl;
+		border-left: 1px solid #ddd;
+		&:first-child{
+			border: 0;
+		}
+		&.pro-pactive{
+			a{
+				.c(#ce1a1b);
+			}
+		}
+	}
+	a{
+		.fs(0.14);
+		.c(#333);
+		.tc;
+		.lh(0.4);
+	}
+}
+.pro-pamain{
+	.p2(0,0.15);
+}
+.pro-parameter{
+	.pt(0.1);
+}
+.pro-pacon{
+	h4{
+		.por;
+		.ovh;
+		.tc;
+		.fs(0);
+		.fwn;
+		.mb(0.03);
+		p{
+			.fs(0.12);
+			.c(#666);
+			.lh(0.24);
+			.ovh;
+			.di;
+			vertical-align: top;
+			.bg(#fff);
+			.p2(0,0.2);
+			.por;
+			.zi(2);
+		}
+		&:after{
+			.wh(100%,1px);
+			.bg(#ddd);
+			.poa;
+			.post(50%);
+			.posl;
+			content: '';
+		}
+	}
+}
+.pro-painfo{
+	.fs(0.12);
+	.lh(0.22);
+	.c(#666);
+	.pb(0.1);
+	a{
+		.c(#ce1a1b);
+	}
+}
+.pro-palist{
+	.fs(.12);
+	.c(#666);
+	.lh(0.34);
+	.mt(0.05);
+	border-top: 1px solid #dadada;
+	& > li{
+		border-right: 1px solid #dadada;
+	}
+	h5{
+		.p2(0,0.1);
+		border-left: 1px solid #dadada;
+		border-bottom: 1px solid #dadada;
+	}
+	
+}
+.pro-msg{
+	li{
+		.ovh;
+		.dt;
+		.w(100%);
+		border-bottom: 1px solid #dadada;
+	}
+	h6,p{
+		.dtc;
+		.p2(0,0.1);
+		border-left: 1px solid #dadada;
+	}
+	h6{
+		.w(40%);
+		.fwn;
+	}
+	p{
+		.w(60%);
+	}
+}
 
 
+/***********************- personal.html -*********************/
+.personal{
+	.por;
+	background: #d5e0f6;
+    background-image: linear-gradient(to top right, #e5ded8,#e5d4da,#d5e0f6);
+	.p2(0.2,0);
+	p{
+		.fs(0.14);
+		.c(#333);
+		.lh(0.26);
+		.tc;
+		.pt(0.1);
+	}
+}
+.per-pic{
+	.wh(0.6,0.6);
+	.bor(#ebebf4,4px);
+	.mc;
+	.br5;
+}
+.per-arrow{
+	content: '';
+	.poa;
+	.post(0.055);
+	.posr(0.05);
+	.wh(0.07,0.07);
+	border-right: 1px solid #828282;
+	border-bottom: 1px solid #828282;
+	transform:rotateZ(-45deg);
+}
+.per-manage{
+	.poa;
+	.post(.2);
+	.posr(.2);
+	.fs(.14);
+	.c(#828282);
+	.pr(0.18);
+	&:after{
+		.per-arrow;
+	}
+}
+.per-order{
+	.bg(#fff);
+	.mb(0.15);
+	h5{
+		.fs(.14);
+		.c(#ce1a1b);
+		.lh(0.38);
+		.p2(0,0.15);
+		.por;
+		.fwn;
+		border-bottom: 1px solid #e6e6e6;
+		&:after{
+			.wh(0.56,2px);
+			.bg(#ce1a1b);
+			content: '';
+			.poa;
+			.posl(0.15);
+			.posb;
+		}
+	}
+	li{
+		.w(20%);
+		.ovh;
+		.fl;
+		.p2(0.15,0);
+		&:last-child{
+			.por;
+			&:after{
+				.wh(1px,56%);
+				.poa;
+				.posl;
+				.post(22%);
+				content: '';
+				border-left: 1px dashed #999;
+			}
+		}
+	}
+	i{
+		.wh(0.22,0.22);
+		.ovh;
+		.mc;
+		img{
+			.w(0.44);
+		}
+	}
+	p{
+		.fs(0.12);
+		.c(#666);
+		.lh(0.16);
+		.tc;
+		.pt(0.04);
+	}
+}
+.per-list{
+	.p2(0,0.15);
+	.bg(#fff);
+	li{
+		border-bottom: 1px solid #e6e6e6;
+		&:last-child{
+			border: 0;
+		}
+	}
+	a{
+		.fs(0.14);
+		.c(#333);
+		.lh(0.42);
+		.ovh;
+		.por;
+		&:after{
+			.per-arrow;
+			.post(0.18);
+			border-color: #ccc;
+		}
+	}
+	span{
+		.c(#999);
+		.fr;
+	}
+}
 
 
+/***********************- manage.html -*********************/
+.per-list.manage{
+	li:first-child{
+		a:after{
+			.dn;
+		}
+	}
+}
+
+/**- pw -**/
+.man-pw{
+	input{
+		.fs(.14);
+		.c(#333);
+		.lh(.42);
+		.w(2.1);
+		.mr(0.3);
+		.fr;
+	}
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/***********************- order.html -*********************/
+.order{
+	.mt(0);
+	.p(0);
+}
+.ord-menu{
+	li{
+		.w(20%);
+		.ovh;
+		.fl;
+		&:first-child{
+			a:after{
+				.w(0.3);
+				.ml(-0.15);
+			}
+		}
+		&.ord-active{
+			a{
+				.c(#ce1a1b);
+				&:after{
+					.db;
+				}
+			}
+		}
+	}
+	a{
+		.ovh;
+		.fs(.14);
+		.c(#333);
+		.lh(0.46);
+		.tc;
+		.por;
+		&:after{
+			content: '';
+			.wh(0.4,2px);
+			.poa;
+			.posl(50%);
+			.posb;
+			.ml(-0.2);
+			.bg(#ce1a1b);
+			.dn;
+		}
+	}
+}
 
 
 
