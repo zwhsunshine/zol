@@ -174,6 +174,29 @@ header{
 		.c(#fff);
 	}
 }
+.head-list{
+	.bga(0,0,0,0.8);
+	.poa;
+	.post(.4);
+	.posr(.09);
+	.w(1.2);
+	.br(6px);
+	li{
+		.ovh;
+		border-bottom: 1px solid #4b4b4b;
+		&:last-child{
+			border: 0;
+		}
+	}
+	a{
+		.ovh;
+		.fs(.14);
+		.c(#cfcfcf);
+		.lh(.42);
+		.tc;
+	}
+}
+
 
 
 /**- banner -**/
@@ -207,7 +230,7 @@ footer{
 	.h(0.55);
 	.pof;
 	.posl;
-	.posb;
+	.posb(2);
 	.bg(#fff);
 	.zi(999);
 	// border-top: 1px solid #f1f1f1;
@@ -296,6 +319,16 @@ footer{
 	li:nth-child(2){
 		.w(20%);
 		border-left: 1px solid #ddd;
+		a{
+			.h(.55);
+			&:before{
+				.post(.15);
+				.db;
+				.bgi('../images/menu3.png');
+    			background-size: auto 1.2rem;
+    			.bgp(0,-.48rem);
+			}
+		}
 	}
 	li:nth-child(3){
 		.w(30%);
@@ -325,14 +358,18 @@ footer{
 }
 .cart-footer{
 	.cart-sel{
-		.w(.5);
+		.w(.7);
 		.h(0.55);
+		.pl(.4);
 		&:after{
 			.posl(0.15);
 		}
+		.fs(.12);
+		.c(#999);
+		.lh(.55);
 	}
 	div{
-		.w(2.13);
+		.w(1.9);
 		.fl;
 		.tr;
 		.pt(0.07);
