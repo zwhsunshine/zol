@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {BrowserRouter as Router} from 'react-router-dom';	//Router：路由
+import {Provider} from 'react-redux';	// Provider：简单说就是，App的所有子组件就默认都可以拿到state
+import {store} from './store/index';	//Store：就是保存数据的地方，整个应用只能有一个 Store
+import App from './app';	//app：主组件
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//热更新
+if(module.hot) module.hot.accept();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+	<Provider store={store}>
+		<Router>
+			<div>
+				<App />
+			</div>
+		</Router>
+	</Provider>,
+	document.getElementById('root')
+)
+
+
+
