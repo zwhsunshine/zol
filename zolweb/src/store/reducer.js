@@ -2,7 +2,11 @@
 import * as types from '../actioncreators/actionTypes';
 
 let obj = {
-	num:1
+	num:1,
+	proTypes:[],		//商品分类
+	products:[],	//所有商品
+	onedata:{},		//一条数据
+	username:''			//获取cookie值
 }
 
 /*
@@ -11,12 +15,21 @@ let obj = {
 */
 function reducer(state=obj,action){
 	switch (action.type){
-		case types.ADD:
-			let addS = JSON.parse(JSON.stringify(state));
-			++addS.num;
-			return addS;
+		case types.GETTYPES:
+			state.proTypes = action.ptypes;
+			return JSON.parse(JSON.stringify(state));
+
+		case types.GETPRODUCT:
+			state.products = action.data;
+			return JSON.parse(JSON.stringify(state));
+
+		case types.GETCOOKIE:
+			state.username = action.username;
+			return JSON.parse(JSON.stringify(state));
+
 		default:
-			return state;
+			console.log('come on reducer default');
+			return JSON.parse(JSON.stringify(state));
 	}
 }
 

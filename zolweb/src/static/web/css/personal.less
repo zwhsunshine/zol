@@ -1,0 +1,111 @@
+@import './public.less';
+
+.personal{
+	.por;
+	background: #d5e0f6;
+    background-image: linear-gradient(to top right, #e5ded8,#e5d4da,#d5e0f6);
+	.p2(0.2,0);
+	p{
+		.fs(0.14);
+		.c(#333);
+		.lh(0.26);
+		.tc;
+		.pt(0.1);
+	}
+}
+.per-pic{
+	.wh(0.6,0.6);
+	.bor(#ebebf4,4px);
+	.mc;
+	.br5;
+}
+.per-manage{
+	.poa;
+	.post(.2);
+	.posr(.2);
+	.fs(.14);
+	.c(#828282);
+	.pr(0.18);
+	.fsn;
+	&:after{
+		.per-arrow;
+	}
+}
+.per-order{
+	.bg(#fff);
+	.mb(0.15);
+	h5{
+		.fs(.14);
+		.c(#ce1a1b);
+		.lh(0.38);
+		.p2(0,0.15);
+		.por;
+		.fwn;
+		border-bottom: 1px solid #e6e6e6;
+		&:after{
+			.wh(0.56,2px);
+			.bg(#ce1a1b);
+			content: '';
+			.poa;
+			.posl(0.15);
+			.posb;
+		}
+	}
+	li{
+		.w(20%);
+		.ovh;
+		.fl;
+		.p2(0.15,0);
+		&:last-child{
+			.por;
+			&:after{
+				.wh(1px,56%);
+				.poa;
+				.posl;
+				.post(22%);
+				content: '';
+				border-left: 1px dashed #999;
+			}
+		}
+	}
+	i{
+		.wh(0.22,0.22);
+		.ovh;
+		.mc;
+		img{
+			.w(0.44);
+		}
+	}
+	p{
+		.fs(0.12);
+		.c(#666);
+		.lh(0.16);
+		.tc;
+		.pt(0.04);
+	}
+}
+.per-list{
+	.p2(0,0.15);
+	.bg(#fff);
+	li{
+		border-bottom: 1px solid #e6e6e6;
+		&:last-child{
+			border: 0;
+		}
+	}
+	a{
+		.fs(0.14);
+		.c(#333);
+		.lh(0.42);
+		.ovh;
+		.por;
+		&:after{
+			.per-arrow;
+			border-color: #ccc;
+		}
+	}
+	span{
+		.c(#999);
+		.fr;
+	}
+}

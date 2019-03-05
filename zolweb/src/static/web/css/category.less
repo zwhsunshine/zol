@@ -1,0 +1,70 @@
+@import './public.less';
+
+.category{
+	.wh(100%,100%);
+	overflow: auto;
+	.poa;
+	.post;
+	.posl;
+	.zi(1);
+	.bg(#fff);
+}
+.menu{
+	overflow: auto;
+	.wh(0.85,100%);
+	.pof;
+	.post;
+	.posb;
+	.bg(#f5f5f5);
+	.pt(0.4);
+	.pb(0.55);
+	a{
+		.fs(0.12);
+		.lh(0.18);
+		.c(#333);
+		.p2(0.15,0.1);
+		.ovh;
+		border-bottom: 1px solid #e0e0e0;	
+	}
+	li{
+		&.active{
+			a{
+				.c(#ce1a1b);
+				.fwb;
+				.bg(#fff);
+			}
+		}
+	}
+}
+.cat-con{
+	.ml(0.85);
+	.p4(0.5,0.15,0.55,0.15);
+	h4{
+		.fs(0.12);
+		.lh(0.2);
+		.c(#999);
+	}
+	& > ul {
+		& > li{
+			.ovh;
+			.pb(0.05);
+		}
+		& ul{
+			.pt(0.05);
+			.pb(0.1);
+			li{
+				.w(33.333%);
+				.ovh;
+				.fl;
+				.pb(0.1);
+			}
+		}
+	}
+	a{
+		.fs(0.12);
+		.lh(0.18);
+		.c(#333);
+		.fwb;
+		.tc;
+	}
+}

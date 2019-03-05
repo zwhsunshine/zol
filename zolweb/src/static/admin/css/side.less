@@ -1,0 +1,83 @@
+@import './public.less';
+
+.sys-nav{
+	.wh(200,100%);
+	.pof;
+	.post;
+	.posl;
+	.pt(58);
+	.zi(990);
+	.bg(#364150);
+	& > ul{
+		.pt(20);
+		& > li{
+			& > a{
+				.por;
+				.pl(20);
+				.lh(40);
+				&:after{
+					.per-arrow;
+					.posr(20);
+				}
+				&:hover{
+					background: transparent;
+				}
+			}
+			&.nav-active{
+				& > a{
+					.c(#f2f2f2);
+				}
+				.iconfont{
+					.c(#f2f2f2);
+				}
+			}
+		}
+	}
+	ul{
+		a{
+			.ovh;
+			.fs(14);
+			.c(#98a6ba);
+			.lh(34);
+			.pl(49);
+			.tra;
+			cursor: pointer;
+			&:hover{
+				.bg(#2c3541);
+			}
+		}
+		ul{
+			overflow: hidden;
+			.h(0);
+			.tra;
+		}
+	}
+}
+.iconfont{
+	.wh(18,18);
+	.ovh;
+	.fl;
+	.mt(11);
+	.mr(8);
+	.fs(18);
+	.lh(18);
+	.c(#98a6ba);
+}
+.nav-info{
+	.pt(20);
+	a{
+		.wh(70,70);
+		.mc;
+		.bor(#5e83bf,3px);
+		.br5;
+		img{
+			.w(100%);
+		}
+	}
+	p{
+		.fs(14);
+		.c(#98a6ba);
+		.lh(30);
+		.tc;
+	}
+}

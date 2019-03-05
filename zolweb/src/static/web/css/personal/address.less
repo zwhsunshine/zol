@@ -1,0 +1,73 @@
+@import '../public.less';
+
+.order-address{
+	.fs(.16);
+	.lh(.22);
+	.c(#333);
+	.bg(#fff);
+	.p2(.2,.15);
+	.pb(0.23);
+	.por;
+	h6{
+		span{
+			.pl(.1);
+		}
+	}
+	p{
+		.fs(.12);
+		span{
+			
+			.lh(.14);
+			.ovh;
+			.di;
+			.mt(0.03);
+			vertical-align: top;
+			.bor(#ce1a1b,1px);
+			.br(2px);
+			.p2(0,0.02);
+			.mr(0.07);
+		}
+	}
+	&:after{
+		.per-arrow;
+		.posr(.15);
+	}
+	&:before{
+		content: '';
+		.poa;
+		.posl;
+		.posb;
+		.wh(100%,3px);
+		.bgi('../images/order-bar.png');
+		background-size: auto 3px;
+		.bgr;
+	}
+}
+.add-list{
+	li{
+		.ovh;
+		.bg(#fff);
+		.pb(0);
+		.por;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	a{
+		.ovh;
+	}
+	.order-address{
+		.w(2.8);
+		&:before{
+			.bgn;
+		}
+		&:after{
+			.dn;
+		}
+	}
+	.icon{
+		.w(.3);
+		.h(100%);
+		.poa;
+		.post;
+		.posr(.15);
+	}
+}

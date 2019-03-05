@@ -1,0 +1,211 @@
+@import './public.less';
+
+.con-main{
+	.pt(30);
+	.pb(7);
+	.mb(20);
+	.h(70);
+	overflow: visible;
+	border-bottom: 1px solid #e7e7e7;
+}
+.con-tit{
+	.fs(0);
+	.fl;
+	& > a,span,.con-select{
+		.ovh;
+		.di;
+		.fs(14);
+		.c(#2a323e);
+		.lh(32);
+		.p4(0,20,0,12);
+	}
+	& > a{
+		.por;
+		&:first-child{
+			.pl(0);
+		}
+		&:after{
+			.per-arrow;
+			.c(#000);
+		}
+		&:hover{
+			.c(#5787d5)
+		}
+	}
+	span{
+		.pr(12);
+		.c(#5787d5);
+	}
+}
+.con-select{
+	overflow: visible !important;
+	.por;
+	.pr(0) !important;
+	p{
+		.fl;
+		.pl(40);
+		.pr(10);
+	}
+	h3{
+		.w(150);
+		.fl;
+		.fwn;
+		.ovh;
+		.lh(26);
+		.bor(#e3e3e3,1px);
+		.p2(0,13);
+		.por;
+		.mt(2);
+		.zi(12);
+		.bg(#f5f5f5);
+		cursor: pointer;
+	}
+	i{
+		.per-arrow;
+		.posr(10);
+		transform: rotateZ(45deg);
+	}
+}
+.con-smain{
+	overflow: visible !important;
+	& > div{
+		overflow: visible !important;
+	}
+	.con-select{
+		.fl;
+	}
+}
+.con-slist{
+	.w(150);
+	.poa;
+	.post(28);
+	.posr;
+	.bg(#f5f5f5);
+	.bor(#e3e3e3);
+	.ovh;
+	.zi(10);
+	.h(0);
+	.tra;
+	// .p2(6px,0);
+	a{
+		.ovh;
+		.p2(0,15px);
+		.fs(14);
+		.c(#2a323e);
+		.lh(32);
+		cursor: pointer;
+		&.con-active,&:hover{
+			.c(#5787d5);
+		}
+	}
+}
+.con-add{
+	.ovh;
+	.fr;
+	.br(4);
+	.fs(14);
+	.c(#fff);
+	.lh(32);
+	.w(90);
+	.bg(#5787d5);
+	.tc;
+}
+
+
+/**- type -**/
+.table{
+	.tab;
+	li{
+		div{
+			&:nth-child(1){
+				.w(80);
+			}
+		}
+	}
+	a{
+		p{
+			.c(#fff);
+			.lh(26);
+		}
+	}
+}
+.tab-edit,.tab-del{
+	.ovh;
+	.di;
+	vertical-align: middle;
+	.fs(14);
+	.c(#fff);
+	.lh(26);
+	.p2(0,8);
+	.br(4);
+	.bg(#00a65a);
+	.m2(0,5);
+}
+.tab-del{
+	.bg(#dd4b39);
+}
+
+.list-none{
+	.fs(14);
+	.c(#666);
+	.lh(30);
+	.tc;
+	.p2(70,10);
+}
+
+.types{
+	li{
+		div{
+			&:nth-child(2){
+				.w(40%);
+			}
+		}
+	}
+}
+
+/**- product -**/
+.list-type{
+	li{
+		div{
+			&:nth-child(3){
+				.w(80);
+			}
+			&:nth-child(4){
+				.w(80);
+			}
+			&:nth-child(5){
+				.w(130);
+			}
+			&:nth-child(6){
+				.w(130);
+			}
+			&:nth-child(7){
+				.w(130);
+			}
+			&:nth-child(8){
+				.w(130);
+			}
+			&:nth-child(9){
+				.w(150);
+			}
+		}
+	}
+}
+
+/**- nav -**/
+.navtypes{
+	li{
+		div{
+			&:nth-child(2){
+				.w(30%);
+			}
+			&:nth-child(3){
+				.w(30%);
+			}
+		}
+	}
+}
+
+
+
+

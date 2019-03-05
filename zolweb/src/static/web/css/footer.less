@@ -1,0 +1,194 @@
+@import './public.less';
+
+footer{
+	.ovh;
+	.w(100%);
+	.h(0.55);
+	.pof;
+	.posl;
+	.posb;
+	.bg(#fff);
+	.zi(999);
+	// border-top: 1px solid #f1f1f1;
+	.sha(0,0,0.1,rgba(0,0,0,0.2));
+	li{
+		.w(25%);
+		.ovh;
+		.fl;
+		a{
+			.ovh;
+			.por;
+			.pt(0.3);
+			.pb(0.05);
+			.fs(0.12);
+			.lh(0.18);
+			.c(#333);
+			.tc;
+			&:before{
+				content: '';
+				.ovh;
+				.wh(0.24,0.24);
+				.poa;
+				.post(0.06);
+				.posl(50%);
+				.ml(-0.12);
+				.bgi('../images/menu3.png');
+				background-size: auto 1.2rem;
+			}
+		}
+		&:nth-child(1){
+			&.active{
+				a:before{
+					.bgp(-0.24,0);
+				}
+			}
+		}
+		&:nth-child(2){
+			a:before{
+				.bgp(0,-0.24);
+			}
+			&.active{
+				a:before{
+					.bgp(-0.24,-0.24);
+				}
+			}
+		}
+		&:nth-child(3){
+			a:before{
+				.bgp(0,-0.48);
+			}
+			&.active{
+				a:before{
+					.bgp(-0.24,-0.48);
+				}
+			}
+		}
+		&:nth-child(4){
+			a:before{
+				.bgp(0,-0.72);
+			}
+			&.active{
+				a:before{
+					.bgp(-0.24,-0.72);
+				}
+			}
+		}
+	}
+}
+.pro-footer{
+	border: 0;
+	a{
+		.p(0);
+		.fs(0.14);
+		.lh(0.55);
+		.c(#fff);
+		&:before{
+			.dn;
+		}
+	}
+	li:nth-child(1),li:nth-child(2){
+		a{
+			.c(#666);
+			.bg(#f8f8f8);
+		}
+	}
+	li:nth-child(2){
+		.w(20%);
+		border-left: 1px solid #ddd;
+		a{
+			.h(.55);
+			&:before{
+				.post(.15);
+				.db;
+				.bgi('../images/menu3.png');
+    			background-size: auto 1.2rem;
+    			.bgp(0,-.48rem);
+			}
+		}
+	}
+	li:nth-child(3){
+		.w(30%);
+		a{
+			.bg(#df5900);
+		}
+	}
+	li:last-child{
+		a{
+			.bg(#ce1a1b);
+		}
+	}
+}
+.man-footer{
+	.h(0.48);
+	.pop-btn{
+		.h(0.48);
+	}
+	a{
+		.p(0);
+		.bg(#ce1a1b);
+		.lh(0.48);
+		&:before{
+			.dn;
+		}
+	}
+}
+.cart-footer{
+	.cart-sel{
+		.w(.7);
+		.h(0.55);
+		.pl(.4);
+		&:after{
+			.posl(0.15);
+		}
+		.fs(.12);
+		.c(#999);
+		.lh(.55);
+	}
+	div{
+		.w(1.9);
+		.fl;
+		.tr;
+		.pt(0.07);
+		p{
+			.fs(.16);
+			.c(#333);
+			.lh(.22);
+		}
+		b{
+			.c(#ce1a1b);
+		}
+		span{
+			.ovh;
+			.fs(.12);
+			.lh(.18);
+			.c(#999);
+		}
+	}
+	a{
+		.fs(.16);
+		.c(#fff);
+		.lh(0.55);
+		.bg(#ce1a1b);
+		.fr;
+		.w(1);
+		.tc;
+		span{
+			.fs(.12);
+		}
+	}
+}
+.order-footer{
+	div{
+		.pt(0);
+		.ml(.15);
+		.tl;
+		p,span{
+			.lh(.55);
+		}
+		span{
+			.di;
+			.pl(0.1);
+			vertical-align: top;
+		}
+	}
+}
